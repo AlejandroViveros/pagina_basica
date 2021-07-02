@@ -1,0 +1,93 @@
+<html>
+
+<head>
+
+    <title>Formulario</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="./css/index.css" </head> <body>
+
+
+    <div class="container">
+        <h2>Formulario envío</h2>
+        <h4>Información persona</h4>
+        <div class="row">
+            <div class="input-field col s4">
+                <input placeholder="Escriba su nombre" id="txtNombre" type="text">
+                <label for="txtNombre">Nombre</label>
+            </div>
+            <div class="input-field col s4">
+                <input placeholder="Escriba su Apellido" id="txtApellidoP" type="text">
+                <label for="txtApellidoP">Apellido Paterno</label>
+            </div>
+            <div class="input-field col s4">
+                <input placeholder="Escriba su segundo apellido" id="txtApellidoM" type="text">
+                <label for="txtApellidoM">Apellido Materno</label>
+            </div>
+            <div class="input-field col s6">
+                <input placeholder="Escriba su edad" id="txtEdad" type="text">
+                <label for="txtEdad">Edad</label>
+            </div>
+            <div class="input-field col s6">
+                <input placeholder="Escriba su correo" id="txtCorreo" type="text">
+                <label for="txtCorreo">Correo</label>
+            </div>
+
+        </div>
+        <h4>Información de domicilio</h4>
+        <div class="row">
+            <div class="input-field col s6">
+                <input placeholder="Escriba su direccion" id="txtDireccion" type="text">
+                <label for="txtDireccion">Direccion</label>
+            </div>
+            <div class="input-field col s6">
+                <select id="selComuna">
+                    <option value="">Seleccione su comuna</option>
+                    <option value="Renca">Renca</option>
+                    <option value="Maipú">Maipu</option>
+                    <option value="Santiago">Santiago</option>
+        
+        
+                </select>
+               
+            </div>
+
+        </div>
+        <h4>Información adicional</h4>
+        <div class="row">
+            <div class="input-field col s12">
+                <textarea id="txtInfoAdicional" class="materialize-textarea"></textarea>
+                <label for="txtInfoAdicional">Ingrese información adicional</label>
+              </div>
+
+
+        </div>
+        <a class="waves-effect waves-light btn">Enviar Informacion</a>
+
+       
+       
+
+
+
+
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var elems = document.querySelectorAll('select');
+            var instances = M.FormSelect.init(elems);
+        });
+    </script>
+    </body>
+
+
+
+
+
+
+
+
+
+</html>
