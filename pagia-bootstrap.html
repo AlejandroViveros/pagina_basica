@@ -1,0 +1,131 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Registro Carito.com</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/index.css">
+
+</head>
+
+<body>
+
+    <div id="primerdiv" class="container">
+        <h4>Formulario de registro</h4>
+        <h5>Datos personales</h5>
+        <div class="row justify-content-start">
+            <div class="col-6">
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon1">@</span>
+                    <input type="text" class="form-control" placeholder="Nombre" aria-describedby="basic-addon1"
+                        id="txtNombre">
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon1">@</span>
+                    <input type="text" class="form-control" placeholder="Apellido paterno"
+                        aria-describedby="basic-addon1" id="txtApellidoPaterno">
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon1">@</span>
+                    <input type="text" class="form-control" placeholder="Apellido materno"
+                        aria-describedby="basic-addon1" id="txtApellidoMaterno">
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="radioSexo" id="rdMasculino" value="M" checked>
+                    <label class="form-check-label" for="rdMasculino">
+                        Masculino
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="radioSexo" id="rdFemenino" value="F">
+                    <label class="form-check-label" for="rdFemenino">
+                        Femenino
+                    </label>
+                </div>
+            </div>
+
+            <h5>Informacion de domicilio</h5>
+            <div class="col-6">
+                <select class="form-select" aria-label="Seleccione su país" id="selPais">
+                    <option value="1">Chile</option>
+                    <option value="2">Perú</option>
+                    <option value="3">Argentina</option>
+                    <option value="4">Brasil</option>
+                    <option value="5">Colombia</option>
+                    <option value="6">Venezuela</option>
+                    <option value="7">Republica Dominicana</option>
+                </select>
+
+            </div>
+            <div class="col-6">
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon1">@</span>
+                    <input type="text" class="form-control" placeholder="Nombre de la calle"
+                        aria-describedby="basic-addon1" id="txtCalle">
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon1">@</span>
+                    <input type="text" class="form-control" placeholder="Numeración" aria-describedby="basic-addon1"
+                        id="txtNumeracion">
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon1">@</span>
+                    <input type="text" class="form-control" placeholder="Codigo postal" aria-describedby="basic-addon1"
+                        id="txtZipCode">
+                </div>
+            </div>
+            <h5>Información de cuenta</h5>
+            <div class="col-6">
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon1">@</span>
+                    <input type="text" class="form-control" placeholder="Correo" aria-describedby="basic-addon1"
+                        id="txtCorreo">
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon1">@</span>
+                    <input type="text" class="form-control" placeholder="Nombre de usuario"
+                        aria-describedby="basic-addon1" id="txtUserName">
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon1">@</span>
+                    <input type="password" class="form-control" placeholder="Nueva contraseña"
+                        aria-describedby="basic-addon1" id="txtPassword">
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon1">@</span>
+                    <input type="password" class="form-control" placeholder="Confirme contraseña"
+                        aria-describedby="basic-addon1" id="txtPassword2">
+                </div>
+            </div>
+            <div class="col-12 divBtn">
+                <button type="button" id="btnEnviar" class="btn btn-outline-secondary"
+                    onclick="guardarDatos()">Enviar</button>
+
+            </div>
+
+
+        </div>
+    </div>
+    <script src="./js/index.js"></script>
+</body>
+
+</html>

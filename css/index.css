@@ -8,3 +8,10 @@ body {
     height: 100px;
 }
 
+#btnEnviar {
+    width: 30%;
+}
+
+.divBtn{
+    text-align: center;
+}
