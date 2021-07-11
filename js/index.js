@@ -108,6 +108,10 @@ function validarRut(p_rut) {
 
     var rutTemporal = rutSinDv;
 
+    var numeroMultiplicar = 2;
+
+    var suma = 0;
+
     for (let index = 0; index < largoSinDV; index++) {
         var ultimoNumero = rutTemporal.substr( rutTemporal.length- 1, rutTemporal.length );
         // console.log("ulitmo numero", ultimoNumero);
@@ -117,6 +121,35 @@ function validarRut(p_rut) {
         
         rutInvertido = rutInvertido + ultimoNumero;
         console.log("rut invertido for", rutInvertido);
+
+        var multiplicacion = ultimoNumero * numeroMultiplicar;
+        numeroMultiplicar ++; 
+        if (numeroMultiplicar == 8){
+            numeroMultiplicar = 2;
+        }
+
+        suma = multiplicacion + suma;
     }
     console.log("Rut invertido final", rutInvertido);
+    console.log("suma", suma);
+    var div11 = suma/11;
+    div11 = parseInt(div11);
+     var mult11 = div11 * 11;
+     var resta = suma - mult11;
+     var resultadoFinal = 11 - resta;
+     console.log("Resultado final", resultadoFinal);
+     if(resultadoFinal == 10){
+         resultadoFinal = "k";
+     }
+     else if (resultadoFinal == 11){
+         resultadoFinal = 0;
+     }
+     else{
+         resultadoFinal = resultadoFinal;
+     }
+     if(resultadoFinal == dvEnviado){
+        console.log("Rut Valido");         
+     } else{
+         console.log("Rut invalido");
+     }
 }
