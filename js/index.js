@@ -1,7 +1,7 @@
 function guardarDatos() {
     try {
         var gDatos = validarDatos();
-        if (gDatos){
+        if (gDatos) {
             var datosP = {
                 nombre: document.getElementById("txtNombre").value,
                 apellidoPaterno: document.getElementById("txtApellidoPaterno").value,
@@ -24,17 +24,17 @@ function guardarDatos() {
                 icon: 'success',
                 title: 'Muy bien!!!',
                 text: 'Usuario validado, puede continuar',
-              })
-        }else{
+            })
+        } else {
             console.log("Los datos no se validaron, revise su información");
             Swal.fire({
                 icon: 'error',
                 title: 'Oops...',
                 text: 'Usuario no validado, revise información',
-              })
+            })
         }
-        
-       
+
+
 
     } catch (error) {
         console.log("Error:", error.stack.toString());
@@ -47,7 +47,7 @@ function guardarDatos() {
 function validarDatos() {
     try {
         var resultado = true;
-        if (document.getElementById("txtPassword").value != document.getElementById("txtPassword2").value || document.getElementById("txtPassword").value == "" ) {
+        if (document.getElementById("txtPassword").value != document.getElementById("txtPassword2").value || document.getElementById("txtPassword").value == "") {
             resultado = false;
         }
         if (document.getElementById("txtNombre").value == "") {
@@ -84,4 +84,39 @@ function validarDatos() {
         console.log("Error:", error.stack.toString());
         return false;
     }
+}
+validarRut("x");
+
+function validarRut(p_rut) {
+    // paso 0 (obtener DV)
+    p_rut = "19515530-5";
+    var largoRut = p_rut.length
+    console.log("Largo rut", largoRut);
+    var dvEnviado = p_rut.substr(largoRut - 1, largoRut);
+    console.log("guion", dvEnviado);
+
+    // paso 1 (obtener rut sin DV)
+
+    var rutSinDv = p_rut.substr(0, largoRut - 2);
+    console.log("Rut sin guion", rutSinDv);
+
+    var largoSinDV = rutSinDv.length;
+
+    // paso 2 (Invertir rut)
+
+    var rutInvertido = "";
+
+    var rutTemporal = rutSinDv;
+
+    for (let index = 0; index < largoSinDV; index++) {
+        var ultimoNumero = rutTemporal.substr( rutTemporal.length- 1, rutTemporal.length );
+        // console.log("ulitmo numero", ultimoNumero);
+       
+        rutTemporal = rutTemporal.substr(0, rutTemporal.length - 1); //cada vez que pasa por esta linea sacaremos un substring
+        // desde el caracter 0 hasta el largo total del string menos 1, por ende cada vez ira guardando un string mas pequeño
+        
+        rutInvertido = rutInvertido + ultimoNumero;
+        console.log("rut invertido for", rutInvertido);
+    }
+    console.log("Rut invertido final", rutInvertido);
 }
