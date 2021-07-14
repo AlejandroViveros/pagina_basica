@@ -15,3 +15,11 @@ body {
 .divBtn{
     text-align: center;
 }
+
+.datosErroneos {
+    color: #212529;
+    background-color: #fff;
+    border-color: red;
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem rgb(255 0 0 / 25%);
+}
